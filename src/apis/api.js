@@ -1,7 +1,3 @@
-/**
- * Created by lmmz on 2019/10/31.
- */
-
 import * as P from './indexApi'
 import axios from 'axios'
 
@@ -33,7 +29,7 @@ const request = (url, params = {}, headers) => {
   return axios(apiConfig);
 }
 
-/* request拦截�*/
+/* request拦截器*/
 axios.interceptors.request.use(function (config) {
   return config;
 }, function (error) {
@@ -41,7 +37,7 @@ axios.interceptors.request.use(function (config) {
   return Promise.reject(error);
 });
 
-/* response拦截�*/
+/* response拦截器*/
 axios.interceptors.response.use(function (response) {
   // 正常响应处理
   // console.log(response)
